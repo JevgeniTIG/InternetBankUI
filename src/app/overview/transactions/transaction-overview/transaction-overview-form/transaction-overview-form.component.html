@@ -1,0 +1,67 @@
+<div class="transaction-overview-form"
+     *ngIf="availableTransaction">
+  <div class="transaction-overview-form-title">
+    transaction details
+  </div>
+
+  <div class="transaction-overview-form-content">
+    <div class="row transaction-overview-headers">
+      <div class="col-md-1 col-12 transaction-id">
+        id
+      </div>
+      <div class="col-md-2 col-12 originator">
+        originator
+      </div>
+      <div class="col-md-2 col-12 beneficiary">
+        beneficiary
+      </div>
+      <div class="col-md-3 col-12 amount-and-currency">
+        amount
+      </div>
+      <div class="col-md-2 col-12 cancellation-fee">
+        cancellation fee
+      </div>
+      <div class="col-md-2 col-12 transaction-status">
+        status
+      </div>
+    </div>
+
+    <div class="row transaction-overview-rows">
+      <div class="col-md-1 col-12 transaction-id">
+        <span>{{availableTransaction?.transactionId}}</span>
+      </div>
+      <div class="col-md-2 col-12 originator">
+        <span>{{availableTransaction?.originatorAccount}}</span>
+      </div>
+      <div class="col-md-2 col-12 beneficiary">
+        <span >{{availableTransaction?.beneficiaryAccount}}</span>
+      </div>
+      <div class="col-md-3 col-12 amount-and-currency">
+        <span>{{availableTransaction?.transactionAmount}} {{availableTransaction?.transactionCurrency}}</span>
+      </div>
+      <div class="col-md-2 col-12 cancellation-fee">
+        <span *ngIf="availableTransaction?.cancellationFee == null"> - </span>
+        <span *ngIf="availableTransaction?.cancellationFee != null">{{availableTransaction?.cancellationFee}} {{availableTransaction?.transactionCurrency}}</span>
+      </div>
+      <div class="col-md-2 col-12 transaction-status">
+        <span class="ok" *ngIf="availableTransaction?.transactionStatus=='OK'">OK</span>
+        <span class="cancelled" *ngIf="availableTransaction?.transactionStatus=='CANCELLED'">CANCELLED</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nb-card class="component-messages"
+         *ngIf="messages && messages.length>0">
+  <nb-card-body>
+    <div class="messages">
+      <div class="message"
+           *ngFor="let message of messages">
+        {{message}}
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+
+

@@ -1,0 +1,38 @@
+<form (ngSubmit)="cancel()"
+      [nbSpinner]="isLoading"
+      nbSpinnerStatus="primary"
+      class="cancel-payment-form"
+      [formGroup]="cancelPaymentForm">
+
+  <nb-card class="payment">
+    <nb-card-header class="title">
+      <span>Transaction Id</span>
+    </nb-card-header>
+    <nb-card-body>
+      <div class="row fields">
+        <div class="field transaction-id">
+          <div class="label">transaction id</div>
+          <div class="input">
+            <input type="number"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   minlength="1"
+                   class="form-control"
+                   formControlName="transactionId"/>
+          </div>
+        </div>
+
+      </div>
+    </nb-card-body>
+  </nb-card>
+
+  <div class="row actions">
+    <button nbButton
+            size="small"
+            outline
+            status="info">
+      Cancel transaction
+    </button>
+  </div>
+</form>

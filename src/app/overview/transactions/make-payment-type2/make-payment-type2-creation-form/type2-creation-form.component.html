@@ -1,0 +1,87 @@
+<form (ngSubmit)="paymentType2()"
+      [nbSpinner]="isLoading"
+      nbSpinnerStatus="primary"
+      class="type2-creation-form"
+      [formGroup]="type2CreationForm">
+
+  <nb-card class="type2">
+    <nb-card-header class="title">
+      <span>Type2 Payment</span>
+    </nb-card-header>
+    <nb-card-body>
+      <div class="row fields">
+        <div class="field debtor-iban">
+          <div class="label">originator account</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   minlength="8"
+                   maxlength="8"
+                   formControlName="debtorIban"/>
+          </div>
+        </div>
+        <div class="field creditor-iban">
+          <div class="label">beneficiary account</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   minlength="5"
+                   formControlName="creditorIban"/>
+          </div>
+        </div>
+        <div class="field amount">
+          <div class="label">amount</div>
+          <div class="input">
+            <input type="number" min="0"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   class="form-control"
+                   formControlName="amount"/>
+          </div>
+        </div>
+        <div class="field currency">
+          <div class="label">currency</div>
+          <div class="input">
+            <input type="text"
+                   value="currencyTypes"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   autocomplete="on"
+                   class="form-control"
+                   formControlName="currency"/>
+
+          </div>
+        </div>
+        <div class="field details">
+          <div class="label">details(optional)</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   autocomplete="off"
+                   maxlength="40"
+                   formControlName="details">
+          </div>
+        </div>
+
+      </div>
+    </nb-card-body>
+  </nb-card>
+
+  <div class="row actions">
+    <button nbButton
+            size="small"
+            outline
+            status="info">
+      Pay
+    </button>
+  </div>
+
+</form>

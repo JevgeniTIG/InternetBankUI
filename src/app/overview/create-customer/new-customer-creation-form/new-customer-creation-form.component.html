@@ -1,0 +1,97 @@
+<form (ngSubmit)="create()"
+      [nbSpinner]="isLoading"
+      nbSpinnerStatus="primary"
+      class="new-customer-creation-form"
+      [formGroup]="newCustomerCreationForm">
+
+  <nb-card class="customer">
+    <nb-card-header class="title">
+      <span>Customer</span>
+    </nb-card-header>
+    <nb-card-body>
+      <div class="row fields">
+        <div class="field id-code">
+          <div class="label">id code</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   formControlName="idCode"/>
+          </div>
+        </div>
+        <div class="field first-name">
+          <div class="label">first name</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   formControlName="firstName"/>
+          </div>
+        </div>
+        <div class="field last-name">
+          <div class="label">last name</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   formControlName="lastName"/>
+          </div>
+        </div>
+        <div class="field eur-balance">
+          <div class="label">eur balance</div>
+          <div class="input">
+            <input type="number"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   autocomplete="off"
+                   formControlName="eurBalance">
+          </div>
+        </div>
+        <div class="field usd-balance">
+          <div class="label">usd balance</div>
+          <div class="input">
+            <input type="number"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   autocomplete="off"
+                   formControlName="usdBalance">
+          </div>
+        </div>
+        <div class="field iban-account">
+          <div class="label">iban account</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   formControlName="ibanAccount"/>
+          </div>
+        </div>
+        <div class="field bic-code">
+          <div class="label">bic code</div>
+          <div class="input">
+            <input type="text"
+                   nbInput
+                   fullWidth
+                   fieldSize="small"
+                   formControlName="bicCode"/>
+          </div>
+        </div>
+      </div>
+    </nb-card-body>
+  </nb-card>
+
+  <div class="row actions">
+    <button nbButton
+            size="small"
+            outline
+            status="info">
+      Register new customer
+    </button>
+  </div>
+</form>

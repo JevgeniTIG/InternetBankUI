@@ -1,0 +1,74 @@
+
+.transaction-search-form {
+
+  nb-card {
+    border: 0 !important;
+    margin-bottom: 0 !important;
+
+    nb-card-body {
+      padding: 10px 0 0 15px;
+      overflow: hidden;
+    }
+  }
+
+  form {
+    input {
+      border-radius: 0 !important;
+    }
+  }
+
+  .form-validations {
+    border: 1px solid red !important;
+    margin: 10px 0 0 !important;
+
+    nb-card-body {
+      padding: 1rem 1.5rem !important;
+
+      .form-validation-messages {
+        .form-validation-message {
+          margin: 5px 0 !important;
+        }
+      }
+    }
+  }
+
+  .transaction-fields {
+    text-align: left;
+
+    .transaction-id {
+      padding: 0 20px 0 0;
+
+      .label {
+        text-transform: uppercase;
+        color: #959595;
+        font-size: 11px;
+        font-weight: normal;
+      }
+
+      .input {
+        min-width: 245px;
+      }
+    }
+  }
+
+
+  .actions {
+    padding: 20px 0 0;
+    text-align: end;
+
+    button {
+      background: #00ECC9;
+      border-color: #00ECC9;
+      color: #004152;
+      line-height: 0;
+      height: 40px;
+      font-size: 13px;
+      margin: 23px 0 0;
+      border-width: 0;
+      cursor: pointer;
+      border-radius: 0;
+    }
+  }
+}
+
+

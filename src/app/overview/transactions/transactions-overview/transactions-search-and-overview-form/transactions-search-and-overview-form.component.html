@@ -1,0 +1,66 @@
+<section class="transactions-search-and-overview-form">
+
+  <nb-card class="form">
+    <nb-card-body>
+      <form (ngSubmit)="show()">
+
+        <div class="actions">
+          <button type="submit"
+                  nbButton
+                  status="primary">
+            <nb-icon icon="search-outline"></nb-icon>
+            <span>Search</span>
+          </button>
+        </div>
+
+      </form>
+    </nb-card-body>
+  </nb-card>
+
+  <div class="transactions-overview-form"
+       *ngIf="availableTransactions && availableTransactions.length > 0">
+    <div class="transaction-overview-form-title">
+      transactions details
+    </div>
+
+    <div class="transaction-overview-form-content">
+      <div class="row transaction-overview-headers">
+        <div class="col-md-2 col-12 transaction-id">
+          id
+        </div>
+        <div class="col-md-2 col-12 originator">
+          originator
+        </div>
+        <div class="col-md-2 col-12 beneficiary">
+          beneficiary
+        </div>
+        <div class="col-md-3 col-12 amount-and-currency">
+          amount
+        </div>
+        <div class="col-md-2 col-12 transaction-date-and-time">
+          transaction date & time
+        </div>
+      </div>
+
+      <div *ngFor="let availableTransaction of availableTransactions" class="row transaction-overview-rows">
+        <div class="col-md-2 col-12 transaction-id">
+          <span>{{availableTransaction?.transactionId}}</span>
+        </div>
+        <div class="col-md-2 col-12 originator">
+          <span>{{availableTransaction?.originatorAccount}}</span>
+        </div>
+        <div class="col-md-2 col-12 beneficiary">
+          <span >{{availableTransaction?.beneficiaryAccount}}</span>
+        </div>
+        <div class="col-md-3 col-12 amount-and-currency">
+          <span>{{availableTransaction?.transactionAmount}} {{availableTransaction?.transactionCurrency}}</span>
+        </div>
+        <div class="col-md-3 col-12 transaction-date-and-time">
+          <span *ngIf="availableTransaction?.orderTime == null"> - </span>
+          <span *ngIf="availableTransaction?.orderTime != null">{{availableTransaction?.orderTime.substring(0,10)}} {{availableTransaction?.orderTime.substring(11,19)}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
