@@ -1,21 +1,25 @@
-<section class="transactions-search-and-overview-form">
+<form class="transactions-search-and-overview-form" (ngSubmit)="show()">
 
-  <nb-card class="form">
+  <nb-card class="info">
+    <nb-card-header class="title">
+      <span>Show all transactions with status 'OK'</span>
+    </nb-card-header>
     <nb-card-body>
-      <form (ngSubmit)="show()">
 
-        <div class="actions">
-          <button type="submit"
-                  nbButton
-                  status="primary">
-            <nb-icon icon="search-outline"></nb-icon>
-            <span>Search</span>
-          </button>
-        </div>
-
-      </form>
     </nb-card-body>
   </nb-card>
+
+
+  <div class="actions">
+    <button type="submit"
+            nbButton
+            status="primary">
+      <nb-icon icon="search-outline"></nb-icon>
+      <span>Search</span>
+    </button>
+  </div>
+
+</form>
 
   <div class="transactions-overview-form"
        *ngIf="availableTransactions && availableTransactions.length > 0">
@@ -63,4 +67,4 @@
     </div>
   </div>
 
-</section>
+

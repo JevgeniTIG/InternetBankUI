@@ -4,11 +4,11 @@ import {TransactionOverviewEventService} from "../../../../services/transaction-
 import {TransactionOverviewEventModel} from "../../../../shared/model/transactions/transaction-overview.event.model";
 
 @Component({
-  selector: 'transaction-search-form',
-  templateUrl: './transaction-search-form.component.html',
-  styleUrls: ['./transaction-search-form.component.scss'],
+  selector: 'transaction-search-and-overview-form',
+  templateUrl: './transaction-search-and-overview-form.component.html',
+  styleUrls: ['./transaction-search-and-overview-form.component.scss'],
 })
-export class TransactionSearchFormComponent implements OnDestroy, OnInit {
+export class TransactionSearchAndOverviewFormComponent implements OnDestroy, OnInit {
   transactionSearchForm: FormGroup;
   transactionSearchFormValidationMessages: string[] = [];
 

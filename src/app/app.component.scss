@@ -6,25 +6,13 @@
 
   .home-title {
     .logo {
-      width: 96%;
-      height: 55px;
-      display: block;
-      background: url('../assets/logo/logo.svg') no-repeat 50%;
-      background-size: contain;
-      margin: 2%;
-      position: absolute;
-      top: 20px;
     }
 
     .background {
-      overflow: hidden;
-      width: 100%;
-      background-repeat: no-repeat;
-      height: 187px;
-      background: url('../assets/background/background.jpg');
-      background-position: 0 187px;
+
     }
   }
+
 
   .day-to-day {
     padding: 1rem 1.5rem;

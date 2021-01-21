@@ -1,11 +1,16 @@
 <nb-layout class="home">
 
-  <nb-layout-header fixed>
+  <nb-layout-header>
     <h1>Simple Bank</h1>
+  </nb-layout-header>
+  <nb-layout-header subheader>
+    <menu-component></menu-component>
   </nb-layout-header>
 
   <nb-layout-column>
-    <overview></overview>
+
+    <router-outlet></router-outlet>
+
   </nb-layout-column>
 
   <nb-layout-footer fixed>
@@ -13,4 +18,7 @@
   </nb-layout-footer>
 
 </nb-layout>
+
+
+
 

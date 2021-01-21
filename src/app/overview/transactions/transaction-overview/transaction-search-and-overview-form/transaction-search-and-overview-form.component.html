@@ -1,0 +1,60 @@
+<form class="transaction-search-and-overview-form"
+      [formGroup]="transactionSearchForm"
+      (ngSubmit)="search()">
+
+  <nb-card class="find-transaction">
+    <nb-card-header class="title">
+      <span>Find transaction</span>
+    </nb-card-header>
+    <nb-card-body>
+
+      <div class="row transaction-fields">
+        <div class="transaction-id">
+          <div class="label">Transaction id</div>
+          <div class="input">
+            <input nbInput
+                   width="20"
+                   autocomplete="off"
+                   type="number"
+                   fieldSize="medium"
+                   minlength="1"
+                   class="form-control"
+                   [status]="isFormFieldInvalid('transactionId')  ? 'danger' : 'basic'"
+                   formControlName="transactionId">
+          </div>
+        </div>
+      </div>
+
+
+    </nb-card-body>
+  </nb-card>
+
+  <div class="row actions">
+    <button type="submit"
+            nbButton
+            status="primary">
+      <span>Search</span>
+    </button>
+  </div>
+
+</form>
+
+<transaction-overview-form></transaction-overview-form>
+
+
+<nb-card class="form-validations"
+         *ngIf="transactionSearchFormValidationMessages && transactionSearchFormValidationMessages.length > 0">
+  <nb-card-body>
+    <div class="form-validation-messages">
+      <div class="form-validation-message"
+           *ngFor="let validationMessage of transactionSearchFormValidationMessages">
+        {{validationMessage}}
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+
+
+
+
+
