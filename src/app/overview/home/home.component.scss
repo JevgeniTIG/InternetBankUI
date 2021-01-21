@@ -1,0 +1,81 @@
+.home-component {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+#right-arrow {
+  opacity: 0;
+  animation: right-arrow-animation 4s ease-in-out 2s;
+
+}
+
+@keyframes right-arrow-animation {
+
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+
+}
+
+#money {
+  opacity: 0;
+  animation: money-animation 3s ease-in-out 3s;
+
+}
+
+@keyframes money-animation {
+
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+
+}
+
+
+#left-arrow {
+  opacity: 0;
+  animation: left-arrow-animation 2s ease-in-out 4s;
+}
+
+@keyframes left-arrow-animation {
+
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
+
+  }
+
+}
+
+
+#phone-bulb {
+  animation: man-phone-bulb .2s 4 ease-in 5s;
+
+}
+
+@keyframes man-phone-bulb {
+
+  from {
+    fill: child;
+  }
+  to {
+    fill: lime;
+  }
+
+}
