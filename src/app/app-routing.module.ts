@@ -7,9 +7,10 @@ import {CancelPaymentFormComponent} from "./overview/transactions/cancel-payment
 import {TransactionsSearchAndOverviewFormComponent} from "./overview/transactions/transactions-overview/transactions-search-and-overview-form/transactions-search-and-overview-form.component";
 import {NewCustomerCreationFormComponent} from "./overview/create-customer/new-customer-creation-form/new-customer-creation-form.component";
 import {TransactionSearchAndOverviewFormComponent} from "./overview/transactions/transaction-overview/transaction-search-and-overview-form/transaction-search-and-overview-form.component";
-import {TransactionOverviewFormComponent} from "./overview/transactions/transaction-overview/transaction-overview-form/transaction-overview-form.component";
+import {HomeComponent} from "./overview/home/home.component";
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'create', component: NewCustomerCreationFormComponent},
   {path: 'type1Payment', component: Type1CreationFormComponent},
   {path: 'type2Payment', component: Type2CreationFormComponent},
@@ -26,6 +27,6 @@ const routes: Routes = [
 export class AppRoutingModule {
 }
 
-export const routingComponents = [NewCustomerCreationFormComponent, Type1CreationFormComponent, Type2CreationFormComponent,
-  Type3CreationFormComponent, CancelPaymentFormComponent, TransactionSearchAndOverviewFormComponent,
-  TransactionsSearchAndOverviewFormComponent]
+export const routingComponents = [HomeComponent, NewCustomerCreationFormComponent, Type1CreationFormComponent,
+  Type2CreationFormComponent, Type3CreationFormComponent, CancelPaymentFormComponent,
+  TransactionSearchAndOverviewFormComponent, TransactionsSearchAndOverviewFormComponent]

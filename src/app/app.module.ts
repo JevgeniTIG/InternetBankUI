@@ -20,7 +20,6 @@ import {
 import {NbEvaIconsModule} from '@nebular/eva-icons';
 
 import {HttpClientModule} from '@angular/common/http';
-
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CancelPaymentFormComponent} from "./overview/transactions/cancel-payment/cancel-payment-form/cancel-payment-form.component";
 import {TransactionOverviewFormComponent} from "./overview/transactions/transaction-overview/transaction-overview-form/transaction-overview-form.component";
@@ -30,6 +29,7 @@ import {Type1CreationFormComponent} from "./overview/transactions/make-payment-t
 import {Type2CreationFormComponent} from "./overview/transactions/make-payment-type2/make-payment-type2-creation-form/type2-creation-form.component";
 import {Type3CreationFormComponent} from "./overview/transactions/make-payment-type3/make-payment-type3-creation-form/type3-creation-form.component";
 import {TransactionSearchAndOverviewFormComponent} from "./overview/transactions/transaction-overview/transaction-search-and-overview-form/transaction-search-and-overview-form.component";
+import {HomeComponent} from "./overview/home/home.component";
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import {TransactionSearchAndOverviewFormComponent} from "./overview/transactions
     TransactionSearchAndOverviewFormComponent,
     TransactionOverviewFormComponent,
     TransactionsSearchAndOverviewFormComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent
 
   ],
   imports: [
